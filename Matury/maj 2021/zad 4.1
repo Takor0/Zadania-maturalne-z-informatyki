@@ -1,0 +1,19 @@
+plik = open("instrukcje.txt","r")
+zmienna = []
+tablica = []
+j=0
+
+
+
+while j<2000:
+    zmienna.append(plik.readline())
+    tablica.append(zmienna[j].split())
+    j += 1
+
+dlugosc = 0
+for i in tablica:
+    if i[0]=='USUN':
+        dlugosc-=1
+    if i[0]=='DOPISZ':
+        dlugosc+=1
+print(dlugosc)
